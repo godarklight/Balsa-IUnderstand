@@ -1,0 +1,13 @@
+ModCFG
+{
+    title = IUnderstand
+    author = godarklight
+    modVersion = 0.1.0
+    Plugin
+    {
+        name = IUnderstand
+        description = For the extra lazy!
+        asmpath = Addons\IUnderstand\IUnderstand.dll
+        order = 100
+    }
+} 
