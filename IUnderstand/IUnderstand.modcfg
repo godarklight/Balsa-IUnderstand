@@ -2,8 +2,8 @@ ModCFG
 {
     title = IUnderstand
     author = godarklight
-    modVersion = 0.1.1
-    imgPath = Addons\IUnderstand\preview.jpg
+    modVersion = 0.1.2
+    imgPath = preview.jpg
     requiresGameVersion = 0.101.2
     Plugin
     {

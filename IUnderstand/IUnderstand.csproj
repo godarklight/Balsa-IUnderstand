@@ -1,72 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{95A28E9C-071F-46A6-9858-D5AF4223D53B}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>IUnderstand</RootNamespace>
-    <AssemblyName>IUnderstand</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <TargetFramework>net472</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="IUnderstandMain.cs" />
-    <Compile Include="Loader.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="IUnderstand.modcfg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="preview.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Balsa.Core">
-      <HintPath>..\External\Managed\Balsa.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>..\External\Managed\UnityEngine.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\External\Managed\UnityEngine.CoreModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\External\Managed\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>../External/Managed/Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\External\Managed\Assembly-CSharp-firstpass.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>../External/Managed/Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Balsa.Core">
+      <HintPath>../External/Managed/Balsa.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="com.unity.multiplayer-hlapi.Runtime">
+      <HintPath>../External/Managed/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+      <Private>false</Private>
     </Reference>
     <Reference Include="FloatingUtil">
-      <HintPath>..\External\Managed\FloatingUtil.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>../External/Managed/FloatingUtil.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>../External/Managed/Unity.TextMeshPro.dll</HintPath>
+      <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\External\Managed\UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>../External/Managed/UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>../External/Managed/UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>../External/Managed/UnityEngine.dll</HintPath>
+      <Private>false</Private>
     </Reference>
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Update="modexport.cfg" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="IUnderstand.modcfg" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="preview.jpg" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>

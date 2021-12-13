@@ -19,16 +19,20 @@ namespace IUnderstand
                 frameCountdown--;
                 if (frameCountdown == 0)
                 {
-                    GameObject[] gos = GameObject.FindObjectsOfType<GameObject>();
-                    GameObject goButton = null;
+                    GameObject[] gos = FindObjectsOfType<GameObject>();
+                    UIButton goButton = null;
                     foreach (GameObject go in gos)
                     {
                         if (go.name == "button_template(Clone)")
                         {
-                            goButton = go;
+                            UIButton testButton = go.GetComponent<UIButton>();
+                            if (testButton?.ButtonText.text == "I Understand")
+                            {
+                                goButton = testButton;
+                            }
                         }
                     }
-                    goButton?.GetComponent<UIButton>()?.onClick.Invoke();
+                    goButton.onClick?.Invoke();
                     Destroy(this);
                 }
             }
